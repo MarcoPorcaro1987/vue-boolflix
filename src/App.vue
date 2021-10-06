@@ -53,4 +53,6 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import "./assets/style/common.scss";
+</style>

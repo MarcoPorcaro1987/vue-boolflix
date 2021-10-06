@@ -1,7 +1,11 @@
 <template>
-  <div class="card">
-    <h3>Titolo: {{ MovieDetails.title }}</h3>
-    <h4>Titolo Originale: {{ MovieDetails.original_title }}</h4>
+  <div class="card container">
+    <img
+      :src="'https://image.tmdb.org/t/p/w154' + MovieDetails.poster_path"
+      alt=""
+    />
+    <h4>{{ MovieDetails.title }}</h4>
+    <h5>Titolo originale: {{ MovieDetails.original_title }}</h5>
     <p>Lingua: <lang-flag :iso="MovieDetails.original_language" /></p>
     <p>Voto: {{ MovieDetails.vote_average }}</p>
   </div>

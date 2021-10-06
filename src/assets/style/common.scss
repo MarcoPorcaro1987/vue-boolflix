@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul{
+    list-style: none;
+    line-height: 1.5;
+}
+
+.card{
+    h4, img, h5, p{
+        margin-bottom: .3125rem;
+    }
+    img{
+        border-radius: .625rem;
+    }
+}
