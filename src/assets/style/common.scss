@@ -19,10 +19,17 @@ ul{
 }
 
 .card{
-    h4, img, h5, p{
+    h4, img, h5{
         margin-bottom: .3125rem;
     }
-    img{
-        border-radius: .625rem;
+    p{
+        font-size: .875rem;
+    }
+    .img-cont{
+        height: 18.75rem;
+        img{
+            width: 100%;
+            border-radius: .625rem;
+        }
     }
 }
