@@ -35,7 +35,6 @@ export default {
   margin-top: 1.875rem;
   color: white;
   h2 {
-    text-align: center;
     margin-bottom: 1.25rem;
   }
   hr {
@@ -45,7 +44,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 0.3125rem;
-    text-align: center;
     li {
       width: calc(100% / 5 - 0.3125rem);
     }

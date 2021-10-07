@@ -18,34 +18,35 @@ ul{
 }
 
 .card{
-    position: relative;
-    text-align: center;
-    &:hover .info {
-        display: block;
-    }
+
     p{
         font-size: .875rem;
     }
     .img-cont{
         min-height: 18.75rem;
-        &:hover{
-            opacity: .3;
+        position: relative;
+
+        &:hover .info {
+            opacity: 1;
+        }    
+        &:hover img{
+            opacity: 0.05;
         }
         img{
-            object-fit: cover;
             width: 100%;
             border-radius: .625rem;
         }     
-    }
-    .info{
-        position: absolute;
-        top:.3125rem;
-        left: .3125rem;
-        display: none;
-        &:hover .img-cont{
-            opacity: .1;
+        .info{
+            position: absolute;
+            top:.3125rem;
+            left: .3125rem;
+            opacity: 0;
+            h4, h5{
+                margin-bottom: .3125rem;
+            }
         }
     }
+   
     .fa-star {
         color: yellow;
         font-size: .625rem

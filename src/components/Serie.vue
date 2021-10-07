@@ -12,21 +12,23 @@
         :alt="SerieDetails.name"
       />
       <p v-if="SerieDetails.poster_path == null">{{ SerieDetails.name }}</p>
-    </div>
-    <div class="info">
-      <h4>Titolo: {{ SerieDetails.name }}</h4>
-      <h5 v-if="SerieDetails.name != SerieDetails.original_title">
-        Titolo Originale: {{ SerieDetails.original_name }}
-      </h5>
-      <p>Lingua: <lang-flag :iso="SerieDetails.original_language" /></p>
-      <div>
-        <i
-          v-for="n in 5"
-          :key="n"
-          class="fa-star"
-          :class="n <= vote() ? 'fas' : 'far'"
-        ></i>
-        <p class="overview">Overview: {{ SerieDetails.overview }}</p>
+      <div class="info">
+        <h4>{{ SerieDetails.name }}</h4>
+        <h5 v-if="SerieDetails.name != SerieDetails.original_title">
+          Titolo Originale: {{ SerieDetails.original_name }}
+        </h5>
+        <p>Lingua: <lang-flag :iso="SerieDetails.original_language" /></p>
+        <div>
+          <i
+            v-for="n in 5"
+            :key="n"
+            class="fa-star"
+            :class="n <= vote() ? 'fas' : 'far'"
+          ></i>
+          <p v-if="SerieDetails.overview != null" class="overview">
+            {{ SerieDetails.overview }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
