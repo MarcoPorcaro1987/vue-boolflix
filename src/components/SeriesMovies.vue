@@ -36,6 +36,7 @@ export default {
   color: white;
   h2 {
     text-align: center;
+    margin-bottom: 1.25rem;
   }
   hr {
     margin: 1.25rem 0;
@@ -43,11 +44,10 @@ export default {
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.25rem;
+    gap: 0.3125rem;
     text-align: center;
     li {
-      width: calc(100% / 5 - 1.25rem);
-      padding: 1.25rem 0;
+      width: calc(100% / 5 - 0.3125rem);
     }
   }
 }

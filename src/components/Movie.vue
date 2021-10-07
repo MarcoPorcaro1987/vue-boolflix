@@ -1,22 +1,33 @@
 <template>
-  <div class="card container">
+  <div class="card">
     <div class="img-cont">
       <img
         v-if="MovieDetails.poster_path != null"
-        :src="'https://image.tmdb.org/t/p/w154' + MovieDetails.poster_path"
+        :src="'https://image.tmdb.org/t/p/w342' + MovieDetails.poster_path"
+        :alt="MovieDetails.title"
       />
-      <img v-else src="../assets/img/movie-poster-coming-soon.png" alt="" />
+      <img
+        v-else
+        src="../assets/img/movie-poster-coming-soon.png"
+        :alt="MovieDetails.title"
+      />
+      <p v-if="MovieDetails.poster_path == null">{{ MovieDetails.title }}</p>
     </div>
-    <h4>{{ MovieDetails.title }}</h4>
-    <h5>Titolo originale: {{ MovieDetails.original_title }}</h5>
-    <p>Lingua: <lang-flag :iso="MovieDetails.original_language" /></p>
-    <div>
-      <i
-        v-for="n in 5"
-        :key="n"
-        class="fa-star"
-        :class="n <= vote() ? 'fas' : 'far'"
-      ></i>
+    <div class="info">
+      <h4>Titolo: {{ MovieDetails.title }}</h4>
+      <h5 v-if="MovieDetails.title != MovieDetails.original_title">
+        Titolo originale: {{ MovieDetails.original_title }}
+      </h5>
+      <p>Lingua: <lang-flag :iso="MovieDetails.original_language" /></p>
+      <div>
+        Voto:<i
+          v-for="n in 5"
+          :key="n"
+          class="fa-star"
+          :class="n <= vote() ? 'fas' : 'far'"
+        ></i>
+        <p class="overview">Overview: {{ MovieDetails.overview }}</p>
+      </div>
     </div>
   </div>
 </template>
