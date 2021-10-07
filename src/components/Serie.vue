@@ -2,14 +2,22 @@
   <div class="card container">
     <div class="img-cont">
       <img
+        v-if="SerieDetails.poster_path != null"
         :src="'https://image.tmdb.org/t/p/w154' + SerieDetails.poster_path"
-        alt=""
       />
+      <img v-else src="../assets/img/movie-poster-coming-soon.png" />
     </div>
     <h4>Titolo: {{ SerieDetails.name }}</h4>
     <h5>Titolo Originale: {{ SerieDetails.original_name }}</h5>
     <p>Lingua: <lang-flag :iso="SerieDetails.original_language" /></p>
-    <p>Voto: {{ division(SerieDetails.vote_average) }}</p>
+    <div>
+      <i
+        v-for="n in 5"
+        :key="n"
+        class="fa-star"
+        :class="n <= vote() ? 'fas' : 'far'"
+      ></i>
+    </div>
   </div>
 </template>
 
@@ -24,8 +32,8 @@ export default {
     LangFlag,
   },
   methods: {
-    division(averageVote) {
-      return Math.ceil(averageVote / 2);
+    vote: function () {
+      return Math.ceil(this.SerieDetails.vote_average / 2);
     },
   },
 };
