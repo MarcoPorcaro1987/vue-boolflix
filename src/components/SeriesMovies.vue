@@ -43,9 +43,9 @@ export default {
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3125rem;
+    gap: 1.25rem 0.625rem;
     li {
-      width: calc(100% / 5 - 0.3125rem);
+      width: calc(100% / 5 - 0.625rem);
     }
   }
 }

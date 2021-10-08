@@ -27,7 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/style/common.scss";
 header {
   display: flex;
   justify-content: space-between;
@@ -42,7 +41,6 @@ header {
     padding: 0.625rem;
     border-radius: 0.3125rem;
     margin-right: 0.625rem;
-    text-align: center;
   }
   button {
     background-color: red;

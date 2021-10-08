@@ -18,14 +18,15 @@ ul{
 }
 
 .card{
-
-    p{
+    p, .text-vote{
         font-size: .875rem;
     }
     .img-cont{
         min-height: 18.75rem;
         position: relative;
-
+        &:hover{
+            overflow-y: auto;
+        }
         &:hover .info {
             opacity: 1;
         }    
@@ -44,15 +45,16 @@ ul{
             h4, h5{
                 margin-bottom: .3125rem;
             }
+            p{
+                margin-bottom: .3125rem;
+            }
+            .overview {
+                font-size: .625rem;
+            }
+            .fa-star {
+                color: yellow;
+                font-size: 0.625rem
+             }
         }
     }
-   
-    .fa-star {
-        color: yellow;
-        font-size: .625rem
-     }
-     .overview {
-         font-size: .625rem
-     }
-  
 }

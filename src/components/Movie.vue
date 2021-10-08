@@ -11,25 +11,22 @@
         src="../assets/img/movie-poster-coming-soon.png"
         :alt="MovieDetails.title"
       />
-      <p v-if="MovieDetails.poster_path == null">{{ MovieDetails.title }}</p>
-
+      <h3 v-if="MovieDetails.poster_path == null">{{ MovieDetails.title }}</h3>
       <div class="info">
         <h4>{{ MovieDetails.title }}</h4>
         <h5 v-if="MovieDetails.title != MovieDetails.original_title">
           Titolo originale: {{ MovieDetails.original_title }}
         </h5>
         <p>Lingua: <lang-flag :iso="MovieDetails.original_language" /></p>
-        <div>
-          Voto:<i
-            v-for="n in 5"
-            :key="n"
-            class="fa-star"
-            :class="n <= vote() ? 'fas' : 'far'"
-          ></i>
-          <p v-if="MovieDetails.overview != null" class="overview">
-            {{ MovieDetails.overview }}
-          </p>
-        </div>
+        <i
+          v-for="n in 5"
+          :key="n"
+          class="fa-star"
+          :class="n <= vote() ? 'fas' : 'far'"
+        ></i>
+        <p v-if="MovieDetails.overview != null" class="overview">
+          {{ MovieDetails.overview }}
+        </p>
       </div>
     </div>
   </div>
