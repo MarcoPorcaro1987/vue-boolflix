@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo">
-      <img src="../assets/img/Boolflix-logo.png" alt="boolflix-logo" />
+      <img src="../assets/img/Logo.png" alt="logo" />
     </div>
     <div>
       <input
