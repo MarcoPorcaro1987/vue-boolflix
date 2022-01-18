@@ -34,7 +34,7 @@ header {
   align-items: center;
   padding: 0.9375rem;
   img {
-    height: 2rem;
+    height: 6rem;
   }
   input {
     width: 18.75rem;
